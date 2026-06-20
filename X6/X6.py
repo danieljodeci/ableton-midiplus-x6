@@ -97,10 +97,10 @@ class X6(ControlSurface):
 
     # -- transport handlers --------------------------------------------------
     def play(self):
-        # continue_playing() resumes from the current position. To make Play
-        # always jump to the arrangement start instead, switch the line below
-        # to: self.song().start_playing()
-        self.song().continue_playing()
+        # start_playing() always restarts from the arrangement start. To make
+        # Play resume from the current playhead position instead, switch the
+        # line below to: self.song().continue_playing()
+        self.song().start_playing()
 
     def stop(self):
         self.song().stop_playing()
